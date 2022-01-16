@@ -86,9 +86,6 @@ print("\nBerhasil ubah data!")
     else:
         print("'{}' Tidak ditemukan.".format(nama))
        
- <img width="711" alt="2022-01-16" src="https://user-images.githubusercontent.com/92783916/149649559-e4533ccd-f7da-4213-adb5-114342b2ffda.png">
- <img width="712" alt="2022-01-16 (1)" src="https://user-images.githubusercontent.com/92783916/149649573-0b18cc39-1bec-4c18-9455-59d0d719a060.png">
-<img width="722" alt="2022-01-16 (2)" src="https://user-images.githubusercontent.com/92783916/149649584-0189a13a-4687-499d-90c8-5ef7e8641668.png">
-
+ 
         
 
