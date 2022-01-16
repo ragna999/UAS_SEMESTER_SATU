@@ -21,7 +21,7 @@
 </body>
 </html>
 
-##struktur package##
+##struktur package
 
 ![modul](https://user-images.githubusercontent.com/92783916/149649906-0999cb09-2709-419d-a472-cf1406c390f2.png)
 
