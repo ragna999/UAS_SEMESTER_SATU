@@ -3,7 +3,7 @@
 
 
 
-* from view.input_nilai import *
+ from view.input_nilai import *
 
 data = {}
 
