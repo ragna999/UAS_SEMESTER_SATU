@@ -85,7 +85,109 @@ print("\nBerhasil ubah data!")
 
     else:
         print("'{}' Tidak ditemukan.".format(nama))
-       
+  
+  
+  
+  
+  *berikut adalah file input_nilai.py
+  
+  
+  Menginput data
+def input_nama():
+    print("\nMasukkan data mahasiswa")
+    global nama
+    nama = input("\nNama: ")
+    return nama
+
+
+def input_nim():
+    global nim
+    nim = input("NIM: ")
+    return nim
+
+
+def input_ntugas():
+    global nilai_tugas
+    nilai_tugas = int(input("Masukkan nilai tugas: "))
+    return nilai_tugas
+
+
+def input_nuts():
+    global nilai_uts
+    nilai_uts = int(input("Masukkan nilai UTS: "))
+    return nilai_uts
+
+
+def input_nuas():
+    global nilai_uas
+    nilai_uas = int(input("Masukkan nilai UAS: "))
+    return nilai_uas
+
+
+# Nilai akhir
+def nakhir():
+    global nilai_akhir
+    nilai_akhir = (nilai_tugas)*30/100 + (nilai_uts)*35/100 + (nilai_uas)*35/100
+    return nilai_akhir
  
+        *berikut adalah view_nilai.py
+        # Menampilkan data
+from model.daftar_nilai import data
+
+def lihat_data():
+    print("Daftar Nilai:")
+    print("===================================================================")
+    print("| No |      Nama      |    NIM    | Tugas |  UTS  |  UAS  | Akhir |")
+    print("===================================================================")
+    if data.keys():
+        no = 1
+        for tabel in data.values():
+            print("| {0:2} | {1:14} | {2:9} | {3:5} | {4:5} | {5:5} | {6:5} |".format
+                (no, tabel[0], tabel[1], tabel[2], tabel[3], tabel[4], tabel[5]))
+            print('-------------------------------------------------------------------')
+            no += 1
+    else:
+        print("=========================TIDAK ADA DATA============================")
+        print("===================================================================")
+        
+        
+        *main.py
+        
+        
+        from model.daftar_nilai import *
+from view.view_nilai import *
+
+#Mulai
+print("===============================================================")
+print("|                PROGRAM INPUT NILAI MAHASISWA                |")
+print("===============================================================")
+
+while True:
+    print("\n")
+    menu = input("(L) Lihat, (T) Tambah, (H) Hapus, (U) Ubah, (C) Cari, (K) Keluar\nPilih menu: ")
+    print("\n")
+
+    # menu
+    if menu.lower() == 't':
+        tambah_data()
+
+    elif menu.lower() == 'c':
+        cari_data()
+
+    elif menu.lower() == 'l':
+        lihat_data()
+
+    elif menu.lower() == 'u':
+        ubah_data()
+
+    elif menu.lower() == 'h':
+        hapus_data()
+
+    # Keluar
+    elif menu.lower() == 'k':
+        break
+
+    else:
+        print("Ada yang salah, Silahkan cek kembali.")
         
 
