@@ -1,9 +1,30 @@
 # UAS_SEMESTER_SATU
-* berikut adalah
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th> Nama</th>
+            <th>NIM</th>
+            <th>Kelas</th>
+        </tr>
+        <tr>
+            <td>Erik maualan </td>
+            <td>312110188</td>
+            <td>TI.21.C1</td>
+        </tr>
+    </table>
+</body>
+</html>
 
+- Berikut adalah isi dari file **daftar_nilai.py**
 
-
- from view.input_nilai import *
+```python
+from view.input_nilai import *
 
 data = {}
 
@@ -64,29 +85,10 @@ print("\nBerhasil ubah data!")
 
     else:
         print("'{}' Tidak ditemukan.".format(nama))
+       
+ <img width="711" alt="2022-01-16" src="https://user-images.githubusercontent.com/92783916/149649559-e4533ccd-f7da-4213-adb5-114342b2ffda.png">
+ <img width="712" alt="2022-01-16 (1)" src="https://user-images.githubusercontent.com/92783916/149649573-0b18cc39-1bec-4c18-9455-59d0d719a060.png">
+<img width="722" alt="2022-01-16 (2)" src="https://user-images.githubusercontent.com/92783916/149649584-0189a13a-4687-499d-90c8-5ef7e8641668.png">
 
-Menghapus data
+        
 
-def hapus_data():
-nama = input("Masukan nama untuk menghapus data : ")
-if nama in data.keys():
-del data[nama]
-print("\nData '{}' berhasil dihapus.".format(nama))
-else:
-print("'{}' Tidak ditemukan.".format(nama))
-
-Mencari data
-def cari_data():
-print("Mencari data: ")
-print("=================================================")
-nama = input("Masukan nama untuk mencari data: ")
-print('\nResult')
-print("==============================================================")
-print("| Nama | NIM | Tugas | UTS | UAS | Akhir |")
-print("==============================================================")
-if nama in data.keys():
-print("| {0:14} | {1:9} | {2:5} | {3:5} | {4:5} | {5:5}"
-.format(nama, data[nama][1], data[nama][2], data[nama][3], data[nama][4], data[nama][5]))
-print('--------------------------------------------------------------')
-else:
-print("'{}' Tidak ditemukan.".format(nama))
